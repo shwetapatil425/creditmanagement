@@ -1,0 +1,50 @@
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style type="text/css">
+body{
+ margin:0;
+ padding: 0;
+ font-family:sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,5),rgba(0,0,0,0.3)),url("55.jpg");
+
+ background-size: cover; 
+}
+form{
+width: 300px;
+position : absolute;
+top:50%;
+left:50%;
+transform: translate(-80%,-50%);
+color:gold;
+}
+table{
+color:pink;
+font-weight:bold;
+}
+</style>
+<body>
+<form action="transfer.php" method="POST">
+<center>
+<h2>TRANSFER CREDIT</h2>
+
+  <div class="form-group">
+      <label for="sender">Sender Name:</label>
+      <input type="text" class="form-control" id="sender" name="sender">
+  </div>
+  <div class="form-group">
+      <label for="email">Receiver Name:</label>
+      <input type="text" class="form-control" id="receiver" name="receiver">
+  </div>
+  <div class="form-group">
+      <label for="credit">Credit:</label>
+      <input type="text" class="form-control" id="credit" name="credit">
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+</center>
+
+</form>
+
+</body>
+</html>
