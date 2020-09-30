@@ -11,40 +11,62 @@ body{
  background-size: cover; 
 }
 form{
-width: 300px;
-position : absolute;
-top:50%;
-left:50%;
-transform: translate(-80%,-50%);
+margin-top:100px;
 color:gold;
+width:300px;
 }
-table{
-color:pink;
-font-weight:bold;
+.btn-primary{
+  width:150px;
 }
+
+
 </style>
 <body>
-<form action="transfer.php" method="POST">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="home.html">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="users.php">Transaction History<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="list.php">View All Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="transfer.html">Transfer Money</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
 <center>
-<h2>TRANSFER CREDIT</h2>
-
+<form action="transfer.php" method="POST">
+<h2>TRANSFER MONEY</h2>
   <div class="form-group">
       <label for="sender">Sender Name:</label>
       <input type="text" class="form-control" id="sender" name="sender">
   </div>
   <div class="form-group">
-      <label for="email">Receiver Name:</label>
+      <label for="receiver">Receiver Name:</label>
       <input type="text" class="form-control" id="receiver" name="receiver">
   </div>
   <div class="form-group">
       <label for="credit">Credit:</label>
-      <input type="text" class="form-control" id="credit" name="credit">
+      <input type="number" class="form-control" id="credit" name="credit" min="1">
   </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    
-</center>
+  
 
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
 </form>
+</center>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
 </html>
